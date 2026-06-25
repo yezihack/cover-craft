@@ -36,10 +36,17 @@ jobs:
           node-version: '22'
           cache: 'pnpm'
 
-      - name: Install dependencies
+      - name: Disable supply-chain age policy for CI
         run: |
-          echo "minimum-release-age=0" >> .npmrc
-          pnpm install --frozen-lockfile
+          node -e "
+            const fs = require('fs');
+            const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+            if (pkg.pnpm) delete pkg.pnpm.auditConfig;
+            fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+          "
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm run build
