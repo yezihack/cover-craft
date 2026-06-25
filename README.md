@@ -85,4 +85,4 @@ src/
 
 ## LICENSE
 
-[MIT](LICENSE)
+[GPL-3.0 license](LICENSE)
