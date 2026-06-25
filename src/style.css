@@ -1,18 +1,21 @@
+/* Google Fonts CDN — must precede all other statements */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;700&family=Noto+Serif+SC:wght@400;700&family=ZCOOL+XiaoWei&display=swap');
+
+/*
+ * Font loading strategy:
+ *   - Google Fonts CDN: Noto Sans SC (400,700), Noto Serif SC (400,700),
+ *     ZCOOL XiaoWei (400), Ma Shan Zheng (400), Inter (400,700)
+ *   - Maple Mono CN: tries local install first, falls back to Noto Sans SC.
+ *     To use the actual Maple Mono font, download MapleMono-CN-Regular.woff2
+ *     from https://github.com/subframe7536/Maple-font/releases
+ *     and place it in public/fonts/MapleMono-CN.woff2
+ *   - Source Han Sans CN: falls back to system-installed font
+ *   - Georgia, Arial: system fonts
+ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/*
- * Fonts are loaded via @fontsource/* packages imported in main.ts:
- *   Noto Sans SC, Noto Serif SC, ZCOOL XiaoWei, Ma Shan Zheng, Inter
- *
- * Maple Mono CN: tries local install first, falls back to Noto Sans SC.
- *   To use the actual Maple Mono font, download MapleMono-CN-Regular.woff2
- *   from https://github.com/subframe7536/Maple-font/releases
- *   and place it in public/fonts/MapleMono-CN.woff2
- * Source Han Sans CN: falls back to system-installed font
- * Georgia, Arial: system fonts
- */
 
 /* Maple Mono CN - local font file with fallback to Noto Sans SC */
 @font-face {

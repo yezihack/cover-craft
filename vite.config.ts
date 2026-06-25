@@ -12,5 +12,15 @@ export default defineConfig({
   },
   server: {
     port: 7005,
-  }
+  },
+  build: {
+    rollupOptions: {
+      onLog(_level, log) {
+        if (log.code === 'INVALID_ANNOTATION' &&
+            log.message.includes('@vueuse/core')) {
+          return
+        }
+      },
+    },
+  },
 })

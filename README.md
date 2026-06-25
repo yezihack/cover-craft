@@ -1,4 +1,4 @@
-# ![](public/favicon.svg) 百里封面设计 — Cover Craft
+# <img src="public/favicon.svg" width="28" height="28" style="vertical-align: middle;" /> 百里封面设计 — Cover Craft
 
 > 浏览器端的封面图生成工具，面向内容创作者的实时设计画板。
 

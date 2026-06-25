@@ -290,7 +290,7 @@ export const useExportConfigStore = defineStore('exportConfig', () => {
     quality: 90,
     filename: '',
     useRandomFilename: true,
-    randomFilenameLength: 32,
+    randomFilenameLength: 12,
     randomUseDigit: true,
     randomUseLower: true,
     randomUseUpper: true,

@@ -9,11 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource/inter": "^5.2.8",
-    "@fontsource/ma-shan-zheng": "^5.2.9",
-    "@fontsource/noto-sans-sc": "^5.2.9",
-    "@fontsource/noto-serif-sc": "^5.2.8",
-    "@fontsource/zcool-xiaowei": "^5.2.8",
     "@iconify/vue": "^5.0.1",
     "@vueuse/components": "^14.3.0",
     "@vueuse/core": "^14.3.0",
