@@ -28,22 +28,13 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: latest
+          version: 10
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: 'pnpm'
-
-      - name: Disable supply-chain age policy for CI
-        run: |
-          node -e "
-            const fs = require('fs');
-            const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-            if (pkg.pnpm) delete pkg.pnpm.auditConfig;
-            fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
-          "
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
