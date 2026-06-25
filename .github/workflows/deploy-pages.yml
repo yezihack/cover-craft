@@ -2,19 +2,15 @@
 name: Deploy static content to Pages
 
 on:
-  # 推送到 main 分支时触发
   push:
     branches: ["main"]
-  # 允许在 Actions 页面手动触发
   workflow_dispatch:
 
-# 配置 GITHUB_TOKEN 权限以允许部署到 Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 只允许一个并发部署，跳过排队中的运行，但不取消进行中的运行
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -41,14 +37,13 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --config.minimumReleaseAge=0
 
       - name: Build
         run: pnpm run build
         env:
           GITHUB_PAGES: 'true'
 
-      # history 路由模式：复制 index.html 为 404.html，支持子路径直接访问/刷新
       - name: Create SPA 404 fallback
         run: cp dist/index.html dist/404.html
 
