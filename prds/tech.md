@@ -30,7 +30,7 @@
 ## 二、目录结构
 
 ```
-cover-designer/
+cover-Craft/
 ├── index.html
 ├── vite.config.ts
 ├── tailwind.config.ts
@@ -340,7 +340,7 @@ import type { SavedConfig, CanvasConfig } from '@/types/canvas'
 import { nanoid } from 'nanoid'
 
 export const useThemeStore = defineStore('theme', () => {
-  const savedConfigs = useLocalStorage<SavedConfig[]>('cover-designer:configs', [])
+  const savedConfigs = useLocalStorage<SavedConfig[]>('cover-Craft:configs', [])
 
   function saveConfig(name: string, config: CanvasConfig) {
     savedConfigs.value.push({
@@ -728,10 +728,10 @@ export const FONT_URLS: Record<string, string> = {
 
 ```bash
 # 1. 创建项目
-npm create vite@latest cover-designer -- --template vue-ts
+npm create vite@latest cover-Craft -- --template vue-ts
 
 # 2. 安装依赖
-cd cover-designer
+cd cover-Craft
 npm install
 npm install pinia @vueuse/core @vueuse/components
 npm install @iconify/vue

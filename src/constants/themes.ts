@@ -55,7 +55,7 @@ export const BUILTIN_THEMES: Theme[] = [
         },
       ],
       watermark: {
-        text: '@yezihack-cover-designer',
+        text: '@yezihack-cover-Craft',
         font: 'Inter',
         bold: false,
         italic: false,

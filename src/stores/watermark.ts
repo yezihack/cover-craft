@@ -4,7 +4,7 @@ import type { WatermarkConfig } from '@/types/canvas'
 
 export const useWatermarkStore = defineStore('watermark', () => {
   const config = ref<WatermarkConfig>({
-    text: '@yezihack-cover-designer',
+    text: '@yezihack-cover-Craft',
     font: 'Inter',
     bold: false,
     italic: false,
@@ -26,7 +26,7 @@ export const useWatermarkStore = defineStore('watermark', () => {
 
   function reset() {
     config.value = {
-      text: '@yezihack-cover-designer',
+      text: '@yezihack-cover-Craft',
       font: 'Inter',
       bold: false,
       italic: false,

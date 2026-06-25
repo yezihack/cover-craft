@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid'
 import type { SavedConfig, CanvasConfig } from '@/types/canvas'
 
 export const useThemeStore = defineStore('theme', () => {
-  const savedConfigs = useLocalStorage<SavedConfig[]>('cover-designer:configs', [])
+  const savedConfigs = useLocalStorage<SavedConfig[]>('cover-Craft:configs', [])
 
   function saveConfig(name: string, config: CanvasConfig) {
     savedConfigs.value.push({
